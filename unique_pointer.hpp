@@ -127,9 +127,20 @@ class unique_pointer<T[]> {
             return unique_pointer(new T[size]);
         }
 
-        //void release(){}
+        T* release(){
+            T* released = this->data;
+            this->data = nullptr;
+            return released;
+        }
 
-        //swap(){}
+        //Swapping the pointer of the unique_pointer object that we are
+        //passing in the arguments with the pointer of this object
+        void swap(unique_pointer<T[]>& pointer){
+
+            T* tempPointer = this->release;
+            this->data = 
+
+        }
 
 
 
